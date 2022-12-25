@@ -11,36 +11,17 @@ let score = 0;
 let questionCounter = 0;
 let availableQuestions = [];
 
-let questions = [
-    {
-        question: "Which choice is part of fullstack wed dev?",
-        choice1: "HTML",
-        choice2: "Python",
-        choice3: "C#",
-        choice4: "Java",
-        answer: 1
+let questions = [];
 
-    },
-    {
-        question: "Which choice one makes fullstack web development prettier?",
-        choice1: "HTML",
-        choice2: "Python",
-        choice3: "CSS",
-        choice4: "Java",
-        answer: 3
-
-    },
-    {
-        question: "Which one is not a programming language?",
-        choice1: "Java",
-        choice2: "Python",
-        choice3: "C#",
-        choice4: "HTML",
-        answer: 4
-
-    },
-]
-
+fetch("questions.json").then(res => {
+    return res.json();
+}).then(loadedQuestions => {
+    questions = loadedQuestions;
+    startGame();
+})
+.catch(err => {
+    /*add a fail toload question ALERT, try again*/
+});
 //constants
 const CORRECT_BONUS = 10;
 const MAX_QUESTIONS = 3;
@@ -59,7 +40,7 @@ getNewQuestion = () => {
     };
     questionCounter++;
     progressText.innerText = 'Question ' + questionCounter + '/' + MAX_QUESTIONS; 
-    /* A better to do the same above code in ES6 is with the below code */
+    /* A better way to do the same above code in ES6 is with the below code */
     /*questionCounterText.innerText = '${questionCounter}/${MAX_QUESTIONS}';*/
     // Update the progressBarFull
     progressBarFull.style.width = (questionCounter / MAX_QUESTIONS) * 100 + "%";
@@ -111,4 +92,3 @@ incrementScore = num => {
     scoreText.innerText = score;
 }
 
-startGame();

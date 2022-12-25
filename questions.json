@@ -1,0 +1,26 @@
+[
+    {
+        "question": "Inside which HTML element do we put the javascript ??",
+        "choice1": "<script>",
+        "choice2": "<javascript>",
+        "choice3": "<js>",
+        "choice4": "<css>",
+        "answer": 1
+    },
+    {
+        "question": "Inside which CSS element do we put the javascript ??",
+        "choice1": "<script>",
+        "choice2": "<javascript>",
+        "choice3": "<js>",
+        "choice4": "<css>",
+        "answer": 3
+    },
+    {
+        "question": "Inside which JavaScript element do we put the javascript ??",
+        "choice1": "<script>",
+        "choice2": "<javascript>",
+        "choice3": "<js>",
+        "choice4": "<css>",
+        "answer": 4
+    }
+]
