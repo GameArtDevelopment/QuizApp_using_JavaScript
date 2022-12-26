@@ -16,15 +16,15 @@ username.addEventListener('keyup', () => {
 saveHighScore = e => {
     e.preventDefault();
     const score = {
-        score: Math.floor(math.random() * 100),
-        name: username.value
+        score: Math.floor(math.random() * 100), //score: mostRecentScore,
+        name: username.value,
     };
     highScores.push(score);
-    highScores.sort( (a,b) => {
+    highScores.sort( (a,b) => { //=>b.score - a.score);
         return b.score - a.score;
     });
     highScores.splice(5);
 
     localStorage.setItem("highScores", JSON.stringify(highScores));
-    window.location.assign("/index.html");
+    window.location.assign("/index.html"); //('/');
 };

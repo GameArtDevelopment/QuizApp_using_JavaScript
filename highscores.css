@@ -10,5 +10,5 @@
 }
 
 .high-score:hover {
-    transform: score(1.025);
+    transform: scale(1.025);
 }
