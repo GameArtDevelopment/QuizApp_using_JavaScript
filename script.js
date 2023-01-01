@@ -16,7 +16,7 @@ let availableQuestions = [];
 let questions = [];
 
 fetch(
-    'https://opentdb.com/api.php?amount=10&category=9&difficulty=easy&type=multiple'
+    'https://opentdb.com/api.php?amount=10&difficulty=easy&type=multiple'
 )
     .then((res) => {
         return res.json();
@@ -64,7 +64,7 @@ startGame = () => {
 getNewQuestion = () => {
     if (availableQuestions.length === 0 || questionCounter >= MAX_QUESTIONS) {
         localStorage.setItem("mostRecentScore", score);
-        return window.location.assign("/end.html");
+        return window.location.assign("end.html");
     };
     questionCounter++;
     progressText.innerText = 'Question ' + questionCounter + '/' + MAX_QUESTIONS; 

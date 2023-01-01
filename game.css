@@ -63,12 +63,12 @@
 
 /* LOADER */
 #loader {
-    border: 1.6rem solid white;
+    border: 1.6rem solid rgb(217, 216, 216);
     border-radius: 50%;
     border-top: 1.6rem solid #56a5eb;
-    width: 12rem;
-    height: 12rem;
-    animation: spin 2s linear infinite;
+    width: 10rem;
+    height: 10rem;
+    animation: spin 3s linear infinite;
 }
 
 @keyframes spin {
